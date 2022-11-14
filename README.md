@@ -70,7 +70,9 @@ happen:
 - If the user has viewed 3 or fewer pages, render a JSON response with the
   article data.
 - If the user has viewed more than 3 pages, render a JSON response including an
-  error message, and a status code of 401 unauthorized.
+  error message `{'message': 'Maximum pageview limit reached'}`, and a status code
+  of 401 unauthorized.
+- An API endpoint at `/clear` is available to clear your session as needed.
 
 ***
 

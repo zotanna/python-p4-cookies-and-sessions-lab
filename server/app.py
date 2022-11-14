@@ -47,12 +47,10 @@ def show_article(id):
     else:
         return make_response(
             jsonify({
-                'message': '401: Unauthorized'
+                'message': 'Maximum pageview limit reached'
             }),
             401
         )
-
-
 
 if __name__ == '__main__':
     app.run(port=5555)
