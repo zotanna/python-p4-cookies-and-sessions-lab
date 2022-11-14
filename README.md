@@ -32,7 +32,10 @@ frontend. To get set up, run:
 
 ```console
 $ pipenv install && pipenv shell
-$ sh setup.sh
+$ npm install --prefix client
+$ cd server
+$ flask db upgrade
+$ python seed.py
 ```
 
 You can work on this lab by running the tests with `pytest -x`. It will also be
@@ -77,3 +80,5 @@ happen:
 ***
 
 ## Resources
+
+- [API - Flask: class flask.session](https://flask.palletsprojects.com/en/2.2.x/api/#flask.session)
