@@ -18,13 +18,7 @@ db.init_app(app)
 @app.route('/clear')
 def clear_session():
     session['page_views'] = 0
-
-    return make_response(
-        jsonify({
-            'message': '200: Successfully cleared session data.'
-        }),
-        200
-    )
+    return {'message': '200: Successfully cleared session data.'}, 200
 
 @app.route('/articles')
 def index_articles():
