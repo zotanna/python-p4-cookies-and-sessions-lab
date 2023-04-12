@@ -23,7 +23,7 @@ function Article() {
         );
       } else {
         r.json().then((message) =>
-          setState({ article: null, error: message.error, status: "rejected" })
+          setState({ article: null, error: message['message'], status: "rejected" })
         );
       }
     });
